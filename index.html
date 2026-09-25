@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>NIKA Music and Arts Studio | Makati</title>
 <meta name="description" content="Makati's community studio for music lessons, fine art, and certified Yamaha pianos. F1-A Mezzanine Floor, Makati Central Square.">
-<link rel="icon" href="https://nikamusicandarts.dwdev.site/home/assets/img/nika-logo.png">
+<link rel="icon" href="/brand/nika-logo-ink.png">
 <meta name="theme-color" media="(min-width: 835px)" content="#fbf7ef">
 <meta name="theme-color" media="(max-width: 834px)" content="#0c0b0a">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -207,20 +207,10 @@ h3{font-size:20px; letter-spacing:-.02em}
 .site-header .wrap{max-width:1560px}
 .nav{display:flex; align-items:center; gap:22px; height:92px}
 .nav-links a{white-space:nowrap}
-/* The logo artwork already carries the wordmark, so the typeset name that used
-   to sit beside it was the same thing twice. Only the mark is left, and it is
-   set large enough to hold the header on its own. No radius, because the
-   artwork is transparent and there is no tile to round.
-
-   The SVG is cropped tight to the artwork, filling 98% of its own viewBox, so
-   these heights are the mark itself rather than a box with padding in it. The
-   PNG this replaced carried about 15% padding and needed roughly 18% more
-   height for the same visible size, which is worth knowing if the artwork is
-   ever re-exported. */
+/* Two exported marks: ink on cream for desktop, cream on ink from tablet
+   portrait down. picture swaps the file, so no invert filter. */
 .brand{display:flex; align-items:center; text-decoration:none; flex:0 0 auto}
-.brand img{height:66px; width:auto}
-/* Live mark is cream for the dark site. Invert it so it reads on ivory. */
-.brand img, .site-footer img.logo{filter:invert(1) hue-rotate(180deg)}
+.brand img{height:72px; width:auto}
 .nav-links{display:none; gap:2px; margin-left:8px}
 .nav-links a, .nav-text{
   display:inline-flex; align-items:center; gap:7px;
@@ -245,7 +235,7 @@ h3{font-size:20px; letter-spacing:-.02em}
   .nav{gap:10px} .nav-actions{gap:6px}
   .nav-text{padding:9px 10px}
   .nav-actions .btn{padding:10px 14px; font-size:11.5px}
-  .brand img{height:50px}
+  .brand img{height:54px}
 }
 @media (max-width:340px){
   .nav{gap:8px} .nav-actions{gap:4px}
@@ -257,7 +247,7 @@ h3{font-size:20px; letter-spacing:-.02em}
    step down to survive the narrowest viewports. */
 @media (max-width:300px){
   .nav{gap:6px} .nav-actions{gap:3px}
-  .brand img{height:42px}
+  .brand img{height:46px}
   .nav-text{padding:8px 7px}
   .nav-actions .btn{padding:8px 10px; font-size:10px; letter-spacing:.03em}
 }
@@ -1003,7 +993,7 @@ section{padding:var(--sec) 0}
 @media (max-width:760px){ .site-footer{padding-top:48px} }
 .foot-grid{display:grid; gap:38px}
 @media (min-width:880px){ .foot-grid{grid-template-columns:1.45fr .9fr 1.4fr .85fr} }
-.site-footer img.logo{height:64px; width:auto; margin-bottom:18px}
+.site-footer img.logo{height:70px; width:auto; margin-bottom:18px}
 .site-footer h4{font-size:9.5px; letter-spacing:.16em; text-transform:uppercase; color:var(--ink); margin-bottom:15px}
 .site-footer p,.site-footer li{font-size:13.5px; color:var(--on-dark-soft); line-height:1.7}
 .site-footer ul{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:10px}
@@ -1085,7 +1075,6 @@ section{padding:var(--sec) 0}
   .cart-count{color:#14120F}
   .site-header{background:rgba(12,11,10,0)}
   .site-header.stuck{background:rgba(12,11,10,.92)}
-  .brand img, .site-footer img.logo{filter:none}
   .media .ph{color:rgba(249,244,228,.55)}
   .media .ph .s{color:rgba(249,244,228,.38)}
   .path{--road-edge:rgba(249,244,228,.16)}
@@ -1137,7 +1126,10 @@ section{padding:var(--sec) 0}
 <header class="site-header" id="siteHeader">
   <div class="wrap nav">
     <a class="brand" href="#top">
-      <img src="https://nikamusicandarts.dwdev.site/home/assets/img/NIKA-Dark.svg" alt="NIKA Music and Arts Studio">
+      <picture>
+        <source media="(max-width:834px)" srcset="/brand/nika-logo-cream.png">
+        <img src="/brand/nika-logo-ink.png" width="929" height="460" alt="NIKA Music and Arts Studio">
+      </picture>
     </a>
     <nav class="nav-links" aria-label="Main">
       <a href="#classes">Classes</a>
@@ -1995,7 +1987,10 @@ section{padding:var(--sec) 0}
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <img class="logo" src="https://nikamusicandarts.dwdev.site/home/assets/img/NIKA-Dark.svg" alt="NIKA Music and Arts Studio">
+        <picture>
+          <source media="(max-width:834px)" srcset="/brand/nika-logo-cream.png">
+          <img class="logo" src="/brand/nika-logo-ink.png" width="929" height="460" alt="NIKA Music and Arts Studio">
+        </picture>
         <p>F1-A Mezzanine Floor, Makati Central Square Mall, Chino Roces Avenue, Makati City,
           near the BDO entrance.</p>
         <p style="margin-top:13px">
