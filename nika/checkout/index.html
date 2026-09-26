@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Checkout | NIKA Studio Shop</title>
+<meta name="description" content="Checkout for NIKA Music and Arts Studio Shop. Payment processing will be connected later.">
+<link rel="icon" href="/nika/brand/nika-logo-ink.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <script type="module" crossorigin src="/nika/assets/checkout-BI95MOvD.js"></script>
+  <link rel="modulepreload" crossorigin href="/nika/assets/cart-D8IFWnDY.js">
+  <link rel="modulepreload" crossorigin href="/nika/assets/chrome-CJLc283i.js">
+  <link rel="modulepreload" crossorigin href="/nika/assets/checkout-B2J38axz.js">
+  <link rel="stylesheet" crossorigin href="/nika/assets/cart-Dn0zJm-k.css">
+  <link rel="stylesheet" crossorigin href="/nika/assets/chrome-BEIbDv0j.css">
+</head>
+<body>
+<div id="shopHeader"></div>
+<main class="shop-main">
+  <div class="wrap">
+    <p class="shop-crumb"><a href="/nika/">Home</a> / <a href="/nika/shop/">Studio Shop</a> / Checkout</p>
+    <div class="sec-head">
+      <p class="tagline">Checkout</p>
+      <h1 class="display">Review and place your order</h1>
+      <p class="lede">Orders are for studio pickup at Makati Central Square. Payment processing is not live yet; this flow saves your order locally so we can wire charges later.</p>
+    </div>
+
+    <div id="checkoutEmpty" class="shop-empty" hidden>
+      <p>Your cart is empty.</p>
+      <a class="btn btn-primary" href="/nika/shop/">Continue shopping</a>
+    </div>
+
+    <form id="checkoutForm" class="checkout-grid" hidden>
+      <div>
+        <div class="checkout-card">
+          <h2>Contact</h2>
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required>
+            </div>
+            <div class="field">
+              <label for="phone">Phone</label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" required placeholder="0917 123 4567">
+            </div>
+          </div>
+          <div class="field">
+            <label for="notes">Pickup note (optional)</label>
+            <textarea id="notes" name="notes" placeholder="Who will pick up, preferred day, or anything the front desk should know."></textarea>
+          </div>
+        </div>
+
+        <div class="checkout-card" style="margin-top:22px">
+          <h2>Payment method</h2>
+          <p class="pay-note">Choose how you plan to pay. No charge is processed on this site yet.</p>
+          <div class="pay-options" role="radiogroup" aria-label="Payment method">
+            <label class="pay-option">
+              <input type="radio" name="paymentMethod" value="card" checked>
+              <span><strong>Credit card</strong><span>Card details are collected for a later charge. Nothing is billed now.</span></span>
+            </label>
+            <label class="pay-option">
+              <input type="radio" name="paymentMethod" value="gcash">
+              <span><strong>GCash</strong><span>Scan the QR, then upload your receipt.</span></span>
+            </label>
+            <label class="pay-option">
+              <input type="radio" name="paymentMethod" value="bank_deposit">
+              <span><strong>Bank deposit</strong><span>Scan the QR or transfer, then upload your receipt.</span></span>
+            </label>
+          </div>
+
+          <div class="pay-panel is-active" id="panel-card" data-method="card">
+            <p class="pay-note">Enter card details to prepare the order. Payment will be connected later.</p>
+            <div class="field">
+              <label for="cardNumber">Card number</label>
+              <input id="cardNumber" name="cardNumber" type="text" inputmode="numeric" autocomplete="cc-number" placeholder="•••• •••• •••• ••••">
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="cardExpiry">Expiry</label>
+                <input id="cardExpiry" name="cardExpiry" type="text" autocomplete="cc-exp" placeholder="MM/YY">
+              </div>
+              <div class="field">
+                <label for="cardCvc">CVC</label>
+                <input id="cardCvc" name="cardCvc" type="text" inputmode="numeric" autocomplete="cc-csc" placeholder="123">
+              </div>
+            </div>
+          </div>
+
+          <div class="pay-panel" id="panel-gcash" data-method="gcash">
+            <div class="qr-block">
+              <img src="/nika/shop/payments/gcash-qr.svg" alt="GCash QR code placeholder">
+              <p>Pay via GCash, then upload a screenshot or PDF of your receipt.</p>
+            </div>
+            <div class="field file-input">
+              <label for="proofGcash">Receipt upload</label>
+              <input id="proofGcash" name="proofGcash" type="file" accept="image/*,application/pdf">
+            </div>
+          </div>
+
+          <div class="pay-panel" id="panel-bank" data-method="bank_deposit">
+            <div class="qr-block">
+              <img src="/nika/shop/payments/bank-qr.svg" alt="Bank deposit QR code placeholder">
+              <p>Transfer to the studio bank account, then upload your deposit slip or receipt.</p>
+            </div>
+            <div class="field file-input">
+              <label for="proofBank">Receipt upload</label>
+              <input id="proofBank" name="proofBank" type="file" accept="image/*,application/pdf">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <aside>
+        <div class="checkout-card">
+          <h2>Order summary</h2>
+          <ul class="order-summary-list" id="summaryList"></ul>
+          <div class="order-summary-total" id="summaryTotal"></div>
+          <p class="pay-note" style="margin-top:14px">Fulfillment: pickup at F1-A Mezzanine, Makati Central Square.</p>
+          <p class="checkout-error" id="checkoutError" role="alert"></p>
+          <button type="submit" class="btn btn-primary" style="width:100%; margin-top:8px">Place order</button>
+        </div>
+      </aside>
+    </form>
+  </div>
+</main>
+<div id="shopFooter"></div>
+</body>
+</html>

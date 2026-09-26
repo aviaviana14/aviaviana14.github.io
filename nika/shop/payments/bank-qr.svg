@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="440" viewBox="0 0 440 440" role="img" aria-label="Bank deposit QR placeholder">
+  <rect width="440" height="440" fill="#fff"/>
+  <rect x="24" y="24" width="120" height="120" fill="#1a1a1a"/>
+  <rect x="40" y="40" width="88" height="88" fill="#fff"/>
+  <rect x="56" y="56" width="56" height="56" fill="#1a1a1a"/>
+  <rect x="296" y="24" width="120" height="120" fill="#1a1a1a"/>
+  <rect x="312" y="40" width="88" height="88" fill="#fff"/>
+  <rect x="328" y="56" width="56" height="56" fill="#1a1a1a"/>
+  <rect x="24" y="296" width="120" height="120" fill="#1a1a1a"/>
+  <rect x="40" y="312" width="88" height="88" fill="#fff"/>
+  <rect x="56" y="328" width="56" height="56" fill="#1a1a1a"/>
+  <rect x="168" y="32" width="24" height="24" fill="#222"/>
+  <rect x="208" y="48" width="40" height="24" fill="#222"/>
+  <rect x="264" y="32" width="24" height="40" fill="#222"/>
+  <rect x="32" y="168" width="40" height="24" fill="#222"/>
+  <rect x="88" y="192" width="24" height="40" fill="#222"/>
+  <rect x="168" y="168" width="104" height="104" fill="#F0B923"/>
+  <text x="220" y="222" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#14120F">BANK</text>
+  <text x="220" y="248" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" fill="#14120F">DEPOSIT</text>
+  <rect x="296" y="176" width="40" height="24" fill="#222"/>
+  <rect x="352" y="200" width="24" height="40" fill="#222"/>
+  <rect x="392" y="168" width="24" height="24" fill="#222"/>
+  <rect x="176" y="296" width="24" height="40" fill="#222"/>
+  <rect x="224" y="320" width="40" height="24" fill="#222"/>
+  <rect x="280" y="304" width="24" height="24" fill="#222"/>
+  <rect x="328" y="344" width="48" height="24" fill="#222"/>
+  <rect x="184" y="376" width="40" height="24" fill="#222"/>
+  <text x="220" y="430" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#555">Placeholder QR  replace with studio bank details</text>
+</svg>
